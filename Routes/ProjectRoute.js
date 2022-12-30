@@ -3,7 +3,7 @@ import { deleteProjects, getProject, getProjectByCategory, getProjectById, saveP
 import upload from '../middleware/Upload.js'
 const router = express.Router()
 
-router.get('/projects', getProject);
+router.get('/', getProject);
 router.get('/projects/:id', getProjectById);
 router.get('/projects/category/:kategori', getProjectByCategory);
 router.post('/projects', upload.single('image'), saveProject);
