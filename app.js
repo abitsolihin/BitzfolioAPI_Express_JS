@@ -30,6 +30,5 @@ app.use(express.json())
 app.use(ProjectRoute)
 
 
-
-const PORT = 8000
+const PORT = process.env.PORT
 app.listen(PORT, ()=> console.log(`servser is running on http:localhost:${PORT}`))
