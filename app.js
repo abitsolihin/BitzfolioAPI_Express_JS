@@ -5,6 +5,7 @@ import ProjectRoute from "./Routes/ProjectRoute.js"
 import path from 'path'
 import { fileURLToPath } from "url";
 import bodyParser from "body-parser";
+import dotenv from 'dotenv';
 
 
 
@@ -28,7 +29,8 @@ app.use(cors())
 app.use('/images', express.static(path.join(__dirname + '/images')));
 app.use(express.json())
 app.use(ProjectRoute)
+dotenv.config();
 
 
-const PORT = process.env.PORT||8000
-app.listen(PORT, ()=> console.log(`servser is running on http:localhost:${PORT}`))
+const port = process.env.PORT;
+app.listen(port, ()=> console.log(`servser is running on http:localhost:${port}`))
