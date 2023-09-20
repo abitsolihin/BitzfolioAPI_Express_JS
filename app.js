@@ -10,7 +10,7 @@ import dotenv from 'dotenv';
 
 
 const app = express();
-mongoose.connect('mongodb+srv://bitzzy:bitzzy123@cluster0.3nkqh9n.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://bitzzy:bitzzy@cluster0.3nkqh9n.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -33,4 +33,4 @@ dotenv.config();
 
 
 const port = process.env.PORT;
-app.listen(port, ()=> console.log(`servser is running on http:localhost:${port}`))
+app.listen(port, () => console.log(`servser is running on http:localhost:${port}`))
